@@ -1,8 +1,8 @@
 Recommendation can be done in multiple ways. One may be choosing items that similar users also like (like is described in the original 
 paper published with the dataset). Another way is to use machine learning, where weights are learned, precomputed, from the data, then used
 to make predictions.
-Unlike the former approach, where computation of the weights and making predictions based off them happens basically at the same time, 
-both computed adhoc from the similarity of users or items. In this assignment we will use the latter approach. 
+Which is unlike the forme, non-ML, approach, where computation of the weights and making predictions based off them happens basically at the same time, 
+both computed adhoc from the similarity of users or items. In this assignment we will use the latter, ML, approach. 
 
 ## Matrix factorization ([retrieval_tfrs.ipynb](retrieval_tfrs.ipynb))
 There are multiple ways to do the ML approach. Typically, (looking at the literature/tensorflow recommenders) one would use a matrix factorization approach, 
@@ -21,10 +21,10 @@ is fast to compute with many or all of the items.
 I evaluated this approach using top-k accuracy, where true positives are the test items (rated) that were in the top-k of the recommendations, and false positives
 are the items that were not in the top-k. (There are no negatives.) 
 
-val_factorized_top_k/top_5_categorical_accuracy: 0.0019
-val_factorized_top_k/top_10_categorical_accuracy: 0.0075
-val_factorized_top_k/top_50_categorical_accuracy: 0.0640
-val_factorized_top_k/top_100_categorical_accuracy: 0.1228
+val_factorized_top_k/top_5_categorical_accuracy: 0.0019  
+val_factorized_top_k/top_10_categorical_accuracy: 0.0075  
+val_factorized_top_k/top_50_categorical_accuracy: 0.0640  
+val_factorized_top_k/top_100_categorical_accuracy: 0.1228  
 
 This is for 6.5K of the books and 64K of test ratings. 
 
