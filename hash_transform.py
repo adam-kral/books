@@ -43,7 +43,3 @@ class HashingTransformer(BaseEstimator, TransformerMixin):
             hashed_cols.append(np.stack(X[col].apply(self.hash, args=(self.hash_func, self.bit_size))))
 
         return np.hstack(hashed_cols)
-
-
-def f():
-    return 34
