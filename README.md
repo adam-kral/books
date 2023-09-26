@@ -18,8 +18,8 @@ the explicit ratings, too, to refine the order of predictions using the explicit
 The advantage of this approach is that it is fast to predict; the users and items are represented by a small vector of chosen dimension, and the dot product
 is fast to compute with many or all of the items.
 
-I evaluated this approach using top-k accuracy, where true positives are the test items (rated) that were in the top-k of the recommendations, and false positives
-are the items that were not in the top-k. (There are no negatives.) I trained only the first described model for simplicity.
+I evaluated this approach using top-k accuracy, where true positives are the test items (rated) that were in the top-k of the recommendations, and false negatives
+are the items that were not in the top-k. I trained only the first described model for simplicity.
 
 val_factorized_top_k/top_5_categorical_accuracy: 0.0019  
 val_factorized_top_k/top_10_categorical_accuracy: 0.0075  
